@@ -2,7 +2,7 @@
 
 [![Go](https://github.com/konrad2002/lenexparser/actions/workflows/go.yml/badge.svg)](https://github.com/konrad2002/lenexparser/actions/workflows/go.yml)
 
-<img src="dsvparser.png" align="right" alt="dsvparser logo" width="175">
+<img src="lenexparser.png" align="right" alt="dsvparser logo" width="175">
 
 This go package contains a parser for the [LENEX file format](https://www.wikiwand.com/de/Lenex) which is used as exchange format for swim meetings in Europe. The parser will support the current version 3.0 of the LENEX standard.
 
