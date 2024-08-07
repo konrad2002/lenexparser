@@ -37,11 +37,35 @@ go get github.com/konrad2002/lenexparser@v0.0.0
 
 LENEX is an UTF-8 encoded XML file that is used as an exchange file for European swim meetings. LENEX files can occur in uncompressed way as `.lef` files as well as the compressed `.lxf` archive. Since March 2010 the current standard 3.0 exists and is valid. LENEX stands for "Ligue Européenne de Natation Exchange Format". The Specifications regarding LENEX can be found [🔗 here](https://wiki.swimrankings.net/index.php/swimrankings:Lenex).
 
+### Data Types
+
+Lenex has a list of used data types. These are converted to the following Go data types:
+
+| LENEX                | short | Go              | Notes                                                                                                                                       |
+|----------------------|-------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| String               | s     | `string`        | special character entities will be replaced [XML char entity references](https://www.wikiwand.com/en/XML_entity?mobile-app=true&theme=dark) |
+| String international | si    | `string`        |                                                                                                                                             |
+| Number               | n     | `int`           |                                                                                                                                             |
+| Enumeration          | e     | `const ()`      |                                                                                                                                             |
+| Date                 | d     | `time.Time`     |                                                                                                                                             |
+| Daytime              | t     | `time.Time`     |                                                                                                                                             |
+| Currency             | c     | `int`           |                                                                                                                                             |
+| Swim time            | st    | `time.Duration` |                                                                                                                                             |
+| Reaction time        | rt    | `time.Duration` |                                                                                                                                             |
+| Unique id            | uid   | `string`        |                                                                                                                                             |
+
 ## 🏊‍♀️ SwimResults
 
 During the development and improvement of [SwimResults](https://swimresults.de) we needed to parse LENEX files. In this repository a LENEX file parser is developed independently from SwimResults.
 
 ## 📄 Changelogs
+
+### v0.0.1
+
+- add example LENEX file
+- data types in README.md
+- add types:
+  - contact
 
 ### v0.0.0
 
