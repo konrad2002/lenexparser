@@ -41,18 +41,20 @@ LENEX is an UTF-8 encoded XML file that is used as an exchange file for European
 
 Lenex has a list of used data types. These are converted to the following Go data types:
 
-| LENEX                | short | Go              | Notes                                                                                                                                       |
-|----------------------|-------|-----------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| String               | s     | `string`        | special character entities will be replaced [XML char entity references](https://www.wikiwand.com/en/XML_entity?mobile-app=true&theme=dark) |
-| String international | si    | `string`        |                                                                                                                                             |
-| Number               | n     | `int`           |                                                                                                                                             |
-| Enumeration          | e     | `const ()`      |                                                                                                                                             |
-| Date                 | d     | `time.Time`     |                                                                                                                                             |
-| Daytime              | t     | `time.Time`     |                                                                                                                                             |
-| Currency             | c     | `int`           |                                                                                                                                             |
-| Swim time            | st    | `time.Duration` |                                                                                                                                             |
-| Reaction time        | rt    | `time.Duration` |                                                                                                                                             |
-| Unique id            | uid   | `string`        |                                                                                                                                             |
+| LENEX                | short | Go              | Notes                                                                                                                                            |
+|----------------------|-------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Currency             | c     | `int`           |                                                                                                                                                  |
+| Date                 | d     | `time.Time`     |                                                                                                                                                  |
+| Daytime              | t     | `time.Time`     |                                                                                                                                                  |
+| Enumeration          | e     | `const ()`      |                                                                                                                                                  |
+| Number               | n     | `int`           |                                                                                                                                                  |
+| Global Identifier    | uuid  | `string`        |                                                                                                                                                  |
+| String               | s     | `string`        | special character entities will be replaced, see [XML char entity references](https://www.wikiwand.com/en/XML_entity?mobile-app=true&theme=dark) |
+| String international | si    | `string`        |                                                                                                                                                  |
+| Swim time            | st    | `time.Duration` |                                                                                                                                                  |
+| Timestamp            | ts    | `time.Time`     |                                                                                                                                                  |
+| Reaction time        | rt    | `time.Duration` |                                                                                                                                                  |
+| Unique id            | uid   | `string`        |                                                                                                                                                  |
 
 ## 🏊‍♀️ SwimResults
 
