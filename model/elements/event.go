@@ -8,7 +8,7 @@ import (
 
 type Event struct {
 	XMLName          xml.Name          `xml:"EVENT"`
-	AgeGroups        string            `xml:"AGEGROUPS"` // TODO
+	AgeGroups        []AgeGroup        `xml:"AGEGROUPS>AGEGROUP"` // TODO
 	Daytime          parser.CustomTime `xml:"daytime,attr"`
 	EventId          int               `xml:"eventid,attr"`
 	Fee              string            `xml:"FEE"` // TODO
