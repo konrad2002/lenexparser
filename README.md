@@ -58,39 +58,22 @@ Lenex has a list of used data types. These are converted to the following Go dat
 
 ## Elements + Implementation Status
 
-- ❌AGEDATE
-- ✅AGEGROUP
-- ❌ATHLETE
-- ❌BANK
-- ✅CLUB
-- ✅COACH
-- ✅CONSTRUCTOR
-- ✅CONTACT
-- ❌ENTRY
-- ✅EVENT
-- ❌FACILITY
-- ❌FEE
-- ❌HANDICAP
-- ✅HEAT
-- ❌JUDGE
-- ✅LENEX
-- ✅MEET
-- ❌MEETINFO
-- ❌OFFICIAL
-- ❌POINTTABLE
-- ✅POOL
-- ✅QUALIFY
-- ✅RANKING
-- ❌RECORD
-- ❌RECORDLIST
-- ❌RELAY
-- ❌RELAYPOSITION
-- ❌RESULT
-- ✅SESSION
-- ❌SPLIT
-- ✅SWIMSTYLE
-- ❌TIMESTANDARD
-- ❌TIMESTANDARDREF
+| Item        | Item         | Item             |
+|-------------|--------------|------------------|
+| ❌AGEDATE    | ✅CONSTRUCTOR | ✅QUALIFY         |
+| ✅AGEGROUP   | ✅CONTACT     | ✅RANKING         |
+| ❌ATHLETE    | ❌ENTRY       | ❌RECORD          |
+| ❌BANK       | ✅EVENT       | ❌RECORDLIST      |
+| ✅CLUB       | ❌FACILITY    | ❌RELAY           |
+| ✅COACH      | ❌FEE         | ❌RELAYPOSITION   |
+| ✅HEAT       | ❌HANDICAP    | ❌RESULT          |
+| ✅LENEX      | ❌JUDGE       | ✅SESSION         |
+| ✅MEET       | ✅LENEX       | ❌SPLIT           |
+| ❌MEETINFO   | ✅MEET        | ✅SWIMSTYLE       |
+| ❌OFFICIAL   | ❌MEETINFO    | ❌TIMESTANDARD    |
+| ❌POINTTABLE | ❌OFFICIAL    | ❌TIMESTANDARDREF |
+| ✅POOL       | ❌POINTTABLE  |                  |
+
 
 ## 🏊‍♀️ SwimResults
 
