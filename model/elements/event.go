@@ -13,7 +13,7 @@ type Event struct {
 	EventId          int               `xml:"eventid,attr"`
 	Fee              string            `xml:"FEE"` // TODO
 	Gender           enums.EventGender `xml:"gender,attr"`
-	Heats            string            `xml:"HEATS"` // TODO
+	Heats            []Heat            `xml:"HEATS>HEAT"`
 	MaxEntries       int               `xml:"maxentries,attr"`
 	Number           int               `xml:"number,attr"`
 	Order            int               `xml:"order,attr"`
@@ -21,7 +21,7 @@ type Event struct {
 	Round            enums.Round       `xml:"round,attr"`
 	Run              int               `xml:"run,attr"`
 	Status           enums.EventStatus `xml:"status,attr"`
-	SwimStyle        string            `xml:"SWIMSTYLE"`        // TODO
+	SwimStyle        SwimStyle         `xml:"SWIMSTYLE"`
 	TimeStandardRefs string            `xml:"TIMESTANDARDREFS"` // TODO
 	Timing           enums.Timing      `xml:"timing,attr"`
 	Type             enums.EventType   `xml:"type,attr"`

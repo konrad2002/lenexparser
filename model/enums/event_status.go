@@ -6,6 +6,6 @@ const (
 	EventStatusEntries    EventStatus = "ENTRIES"
 	EventStatusSeeded     EventStatus = "SEEDED"
 	EventStatusRunning    EventStatus = "RUNNING"
-	EventStatusUnOfficial EventStatus = "UNOFFICIAL"
+	EventStatusUnofficial EventStatus = "UNOFFICIAL"
 	EventStatusOfficial   EventStatus = "OFFICIAL"
 )
