@@ -11,7 +11,7 @@ type Athlete struct {
 	AthleteId   int                 `xml:"athleteid,attr"`
 	Birthdate   parser.CustomTime   `xml:"birthdate,attr"`
 	Club        Club                `xml:"CLUB"`
-	Entries     int                 `xml:"ENTRIES"` // TODO
+	Entries     []Entry             `xml:"ENTRIES>ENTRY"` // TODO
 	Firstname   string              `xml:"firstname,attr"`
 	FirstnameEn string              `xml:"firstname.en,attr"`
 	Gender      enums.Gender        `xml:"gender,attr"`

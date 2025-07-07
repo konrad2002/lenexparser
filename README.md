@@ -41,37 +41,37 @@ LENEX is an UTF-8 encoded XML file that is used as an exchange file for European
 
 Lenex has a list of used data types. These are converted to the following Go data types:
 
-| LENEX                | short | Go              | Notes                                                                                                                                            |
-|----------------------|-------|-----------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| Currency             | c     | `int`           |                                                                                                                                                  |
-| Date                 | d     | `parser.CustomTime`     |                                                                                                                                                  |
-| Daytime              | t     | `parser.CustomTime`     |                                                                                                                                                  |
-| Enumeration          | e     | `const ()`      |                                                                                                                                                  |
-| Number               | n     | `int`           |                                                                                                                                                  |
-| Global Identifier    | uuid  | `string`        |                                                                                                                                                  |
-| String               | s     | `string`        | special character entities will be replaced, see [XML char entity references](https://www.wikiwand.com/en/XML_entity?mobile-app=true&theme=dark) |
-| String international | si    | `string`        |                                                                                                                                                  |
-| Swim time            | st    | `time.Duration` |                                                                                                                                                  |
-| Timestamp            | ts    | `parser.CustomTime`     |                                                                                                                                                  |
-| Reaction time        | rt    | `time.Duration` |                                                                                                                                                  |
-| Unique id            | uid   | `string`        |                                                                                                                                                  |
+| LENEX                | short | Go                  | Notes                                                                                                                                            |
+|----------------------|-------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| Currency             | c     | `int`               |                                                                                                                                                  |
+| Date                 | d     | `parser.CustomTime` |                                                                                                                                                  |
+| Daytime              | t     | `parser.CustomTime` |                                                                                                                                                  |
+| Enumeration          | e     | `const ()`          |                                                                                                                                                  |
+| Number               | n     | `int`               |                                                                                                                                                  |
+| Global Identifier    | uuid  | `string`            |                                                                                                                                                  |
+| String               | s     | `string`            | special character entities will be replaced, see [XML char entity references](https://www.wikiwand.com/en/XML_entity?mobile-app=true&theme=dark) |
+| String international | si    | `string`            |                                                                                                                                                  |
+| Swim time            | st    | `parser.SwimTime`   |                                                                                                                                                  |
+| Timestamp            | ts    | `parser.CustomTime` |                                                                                                                                                  |
+| Reaction time        | rt    | `parser.SwimTime`   |                                                                                                                                                  |
+| Unique id            | uid   | `string`            |                                                                                                                                                  |
 
 ## Elements + Implementation Status
 
-| Item         | Item        | Item             |
-|--------------|-------------|------------------|
-| ✅AGEDATE     | ❌HANDICAP   | ❌RECORDLIST      |
-| ✅AGEGROUP    | ✅HEAT       | ❌RELAY           |
-| ✅ATHLETE     | ❌JUDGE      | ❌RELAYPOSITION   |
-| ✅BANK        | ✅LENEX      | ❌RESULT          |
-| ✅CLUB        | ✅MEET       | ✅SESSION         |
-| ✅COACH       | ❌MEETINFO   | ❌SPLIT           |
-| ✅CONSTRUCTOR | ❌OFFICIAL   | ✅SWIMSTYLE       |
-| ✅CONTACT     | ❌POINTTABLE | ❌TIMESTANDARD    |
-| ❌ENTRY       | ✅POOL       | ❌TIMESTANDARDREF |
-| ✅EVENT       | ✅QUALIFY    |                  |
-| ❌FACILITY    | ✅RANKING    |                  |
-| ❌FEE         | ❌RECORD     |                  |
+| Item           | Item        | Item             |
+|----------------|-------------|------------------|
+| ✅AGEDATE       | ❌HANDICAP   | ❌RECORDLIST      |
+| ✅AGEGROUP      | ✅HEAT       | ❌RELAY           |
+| ✅ATHLETE       | ❌JUDGE      | ❌RELAYPOSITION   |
+| ✅BANK          | ✅LENEX      | ❌RESULT          |
+| ✅CLUB          | ✅MEET       | ✅SESSION         |
+| ✅COACH         | ❌MEETINFO   | ❌SPLIT           |
+| ✅CONSTRUCTOR   | ❌OFFICIAL   | ✅SWIMSTYLE       |
+| ✅CONTACT       | ❌POINTTABLE | ❌TIMESTANDARD    |
+| ✅ENTRY         | ✅POOL       | ❌TIMESTANDARDREF |
+| ✅EVENT         | ✅QUALIFY    |                  |
+| ❌FACILITY      | ✅RANKING    |                  |
+| ❌FEE           | ❌RECORD     |                  |
 
 
 
