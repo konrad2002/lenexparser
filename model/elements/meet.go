@@ -8,12 +8,12 @@ import (
 
 type Meet struct {
 	XMLName           xml.Name           `xml:"MEET"`
-	AgeDate           string             `xml:"AGEDATE"` // TODO
-	Bank              string             `xml:"BANK"`    // TODO
+	AgeDate           AgeDate            `xml:"AGEDATE"`
+	Bank              Bank               `xml:"BANK"`
 	Altitude          int                `xml:"altitude,attr"`
 	City              string             `xml:"city,attr"`
 	CityEn            string             `xml:"city.en,attr"`
-	Clubs             []Club             `xml:"CLUBS>CLUB"` // TODO
+	Clubs             []Club             `xml:"CLUBS>CLUB"`
 	Contact           Contact            `xml:"CONTACT"`
 	Course            enums.Course       `xml:"course,attr"`
 	Deadline          parser.CustomTime  `xml:"deadline,attr"`
