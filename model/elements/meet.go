@@ -33,8 +33,8 @@ type Meet struct {
 	Organizer         string             `xml:"organizer,attr"`
 	OrganizerUrl      string             `xml:"organizer.url,attr"`
 	PointTable        string             `xml:"POINTTABLE"` // TODO
-	Pool              string             `xml:"POOL"`       // TODO
-	Qualify           string             `xml:"QUALIFY"`    // TODO
+	Pool              Pool               `xml:"POOL"`
+	Qualify           string             `xml:"QUALIFY"` // TODO
 	ReserveCount      int                `xml:"reservecount,attr"`
 	ResultUrl         string             `xml:"result.url,attr"`
 	Sessions          string             `xml:"SESSIONS"` // TODO
