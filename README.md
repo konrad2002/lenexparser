@@ -56,6 +56,42 @@ Lenex has a list of used data types. These are converted to the following Go dat
 | Reaction time        | rt    | `time.Duration` |                                                                                                                                                  |
 | Unique id            | uid   | `string`        |                                                                                                                                                  |
 
+## Elements + Implementation Status
+
+- ❌AGEDATE
+- ✅AGEGROUP
+- ❌ATHLETE
+- ❌BANK
+- ✅CLUB
+- ✅COACH
+- ✅CONSTRUCTOR
+- ✅CONTACT
+- ❌ENTRY
+- ✅EVENT
+- ❌FACILITY
+- ❌FEE
+- ❌HANDICAP
+- ✅HEAT
+- ❌JUDGE
+- ✅LENEX
+- ✅MEET
+- ❌MEETINFO
+- ❌OFFICIAL
+- ❌POINTTABLE
+- ✅POOL
+- ✅QUALIFY
+- ✅RANKING
+- ❌RECORD
+- ❌RECORDLIST
+- ❌RELAY
+- ❌RELAYPOSITION
+- ❌RESULT
+- ✅SESSION
+- ❌SPLIT
+- ✅SWIMSTYLE
+- ❌TIMESTANDARD
+- ❌TIMESTANDARDREF
+
 ## 🏊‍♀️ SwimResults
 
 During the development and improvement of [SwimResults](https://swimresults.de) we needed to parse LENEX files. In this repository a LENEX file parser is developed independently from SwimResults.
