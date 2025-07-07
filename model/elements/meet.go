@@ -37,7 +37,7 @@ type Meet struct {
 	Qualify           Qualify            `xml:"QUALIFY"`
 	ReserveCount      int                `xml:"reservecount,attr"`
 	ResultUrl         string             `xml:"result.url,attr"`
-	Sessions          string             `xml:"SESSIONS"` // TODO
+	Sessions          []Session          `xml:"SESSIONS>SESSION"`
 	StartMethod       enums.StartMethod  `xml:"startmethod,attr"`
 	Status            enums.MeetStatus   `xml:"status,attr"`
 	SWRid             string             `xml:"swrid,attr"`
