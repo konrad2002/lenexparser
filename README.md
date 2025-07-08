@@ -1,6 +1,7 @@
 # 📝 LENEX Parser
 
 [![Go](https://github.com/konrad2002/lenexparser/actions/workflows/go.yml/badge.svg)](https://github.com/konrad2002/lenexparser/actions/workflows/go.yml)
+[![Go Reference](https://pkg.go.dev/badge/github.com/konrad2002/lenexparser.svg)](https://pkg.go.dev/github.com/konrad2002/lenexparser)
 
 <img src="lenexparser.png" align="right" alt="dsvparser logo" width="175">
 
