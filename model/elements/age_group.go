@@ -12,7 +12,7 @@ type AgeGroup struct {
 	AgeMin     int                     `xml:"agemin,attr"`
 	Gender     enums.AgeGroupGender    `xml:"gender,attr"`
 	Calculate  enums.AgeGroupCalculate `xml:"calculate,attr"`
-	Handicap   enums.Handicap          `xml:"handicap,attr"`
+	Handicap   enums.HandicapClass     `xml:"handicap,attr"`
 	LevelMax   string                  `xml:"levelmax,attr"`
 	LevelMin   string                  `xml:"levelmin,attr"`
 	Levels     string                  `xml:"levels,attr"`

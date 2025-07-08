@@ -15,7 +15,7 @@ type Athlete struct {
 	Firstname   string              `xml:"firstname,attr"`
 	FirstnameEn string              `xml:"firstname.en,attr"`
 	Gender      enums.Gender        `xml:"gender,attr"`
-	Handicap    int                 `xml:"HANDICAP"` // TODO
+	Handicap    Handicap            `xml:"HANDICAP"`
 	Lastname    string              `xml:"lastname,attr"`
 	LastnameEn  string              `xml:"lastname.en,attr"`
 	Level       string              `xml:"level,attr"`

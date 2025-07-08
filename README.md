@@ -61,8 +61,8 @@ Lenex has a list of used data types. These are converted to the following Go dat
 | Item           | Item        | Item             |
 |----------------|-------------|------------------|
 | ✅AGEDATE       | ❌HANDICAP   | ❌RECORDLIST      |
-| ✅AGEGROUP      | ✅HEAT       | ❌RELAY           |
-| ✅ATHLETE       | ❌JUDGE      | ❌RELAYPOSITION   |
+| ✅AGEGROUP      | ✅HEAT       | ✅RELAY           |
+| ✅ATHLETE       | ❌JUDGE      | ✅RELAYPOSITION   |
 | ✅BANK          | ✅LENEX      | ✅RESULT          |
 | ✅CLUB          | ✅MEET       | ✅SESSION         |
 | ✅COACH         | ✅MEETINFO   | ❌SPLIT           |
