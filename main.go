@@ -8,7 +8,9 @@ import (
 	"os"
 )
 
-func main() {
+func main() {}
+
+func PrintEventList() {
 	//xmlString, err := os.ReadFile("assets/231209-Marienberg-PR.lef")
 	xmlString, err := os.ReadFile("assets/mdm25.lef")
 	if err != nil {
@@ -20,10 +22,15 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(lenex)
-	fmt.Printf("Lenex (%s) generated with '%s' from '%s' in version %s\n", lenex.Version, lenex.Constructor.Name, lenex.Constructor.Contact.Name, lenex.Constructor.Version)
 
-	for _, meet := range lenex.Meets {
-		fmt.Printf("At '%s' there are %d teams registered\n", meet.Name, len(meet.Clubs))
+	meet := lenex.Meets[0]
+	fmt.Printf("Events at '%s %d'\n", meet.Name, meet.Sessions[0].Date.Year())
+
+	for _, session := range meet.Sessions {
+		fmt.Printf("\tSession %d:\n", session.Number)
+
+		for _, event := range session.Events {
+			fmt.Printf("\t\tEvent %d - %s\n", event.Number, event.SwimStyle.Name)
+		}
 	}
 }

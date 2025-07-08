@@ -10,12 +10,12 @@ If you are looking for a DSV parser, check [konrad2002/dsvparser](https://github
 
 ## 💻 Development
 
-This project is currently under development and lacking lots of functionalities.
+This project is currently under development and might lack some functionalities.
 Feel free to contribute to the project by opening a pull request or getting in touch with [@konrad2002](https://weiss-konrad.de).
 
 ### Functionality
 
-*tbd*
+Using the `encoding/xml` package this project parses the given LENEX XML file and provides data types for all elements from the LENEX standard (see list below). 
 
 ## 📥 Usage
 
@@ -26,12 +26,43 @@ Everyone is allowed to use this project for commercial and non-commercial usage.
 Import the package
 
 ```sh
-go get github.com/konrad2002/lenexparser@v0.0.0
+go get github.com/konrad2002/lenexparser@v0.1.0
 ```
 
 ### Example
 
-*tbd*
+The following example prints a list of all events of a meeting.
+
+```go
+import (
+	...
+	"github.com/konrad2002/lenexparser/model/elements"
+)
+
+func PrintEventList() {
+	xmlString, err := os.ReadFile("assets/mdm25.lef")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	var lenex elements.Lenex
+	err = xml.Unmarshal(xmlString, &lenex)
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	meet := lenex.Meets[0]
+	fmt.Printf("Events at '%s %d'\n", meet.Name, meet.Sessions[0].Date.Year())
+
+	for _, session := range meet.Sessions {
+		fmt.Printf("\tSession %d:\n", session.Number)
+
+		for _, event := range session.Events {
+			fmt.Printf("\t\tEvent %d - %s\n", event.Number, event.SwimStyle.Name)
+		}
+	}
+}
+```
 
 ## 📋 Standard
 
@@ -56,22 +87,22 @@ Lenex has a list of used data types. These are converted to the following Go dat
 | Reaction time        | rt    | `parser.SwimTime`   |                                                                                                                                                  |
 | Unique id            | uid   | `string`            |                                                                                                                                                  |
 
-## Elements + Implementation Status
+### Elements + Implementation Status
 
-| Item           | Item        | Item                 |
-|----------------|-------------|----------------------|
-| ✅AGEDATE       | ✅HANDICAP   | ✅RECORDLIST          |
-| ✅AGEGROUP      | ✅HEAT       | ✅RELAY               |
-| ✅ATHLETE       | ✅JUDGE      | ✅RELAYPOSITION       |
-| ✅BANK          | ✅LENEX      | ✅RESULT              |
-| ✅CLUB          | ✅MEET       | ✅SESSION             |
-| ✅COACH         | ✅MEETINFO   | ✅SPLIT               |
-| ✅CONSTRUCTOR   | ✅OFFICIAL   | ✅SWIMSTYLE           |
-| ✅CONTACT       | ✅POINTTABLE | ✅TIMESTANDARD        |
-| ✅ENTRY         | ✅POOL       | ✅TIMESTANDARDLIST    |
-| ✅EVENT         | ✅QUALIFY    | ✅TIMESTANDARDREF     |
-| ✅FACILITY      | ✅RANKING    |                      |
-| ✅FEE           | ✅RECORD     |                      |
+| Item          | Item         | Item               |
+|---------------|--------------|--------------------|
+| ✅ AGEDATE     | ✅ HANDICAP   | ✅ RECORDLIST       |
+| ✅ AGEGROUP    | ✅ HEAT       | ✅ RELAY            |
+| ✅ ATHLETE     | ✅ JUDGE      | ✅ RELAYPOSITION    |
+| ✅ BANK        | ✅ LENEX      | ✅ RESULT           |
+| ✅ CLUB        | ✅ MEET       | ✅ SESSION          |
+| ✅ COACH       | ✅ MEETINFO   | ✅ SPLIT            |
+| ✅ CONSTRUCTOR | ✅ OFFICIAL   | ✅ SWIMSTYLE        |
+| ✅ CONTACT     | ✅ POINTTABLE | ✅ TIMESTANDARD     |
+| ✅ ENTRY       | ✅ POOL       | ✅ TIMESTANDARDLIST |
+| ✅ EVENT       | ✅ QUALIFY    | ✅ TIMESTANDARDREF  |
+| ✅ FACILITY    | ✅ RANKING    |                    |
+| ✅ FEE         | ✅ RECORD     |                    |
 
 
 
