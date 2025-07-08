@@ -11,7 +11,7 @@ type Athlete struct {
 	AthleteId   int                 `xml:"athleteid,attr"`
 	Birthdate   parser.CustomTime   `xml:"birthdate,attr"`
 	Club        Club                `xml:"CLUB"`
-	Entries     []Entry             `xml:"ENTRIES>ENTRY"` // TODO
+	Entries     []Entry             `xml:"ENTRIES>ENTRY"`
 	Firstname   string              `xml:"firstname,attr"`
 	FirstnameEn string              `xml:"firstname.en,attr"`
 	Gender      enums.Gender        `xml:"gender,attr"`
@@ -24,7 +24,7 @@ type Athlete struct {
 	NamePrefix  string              `xml:"nameprefix,attr"`
 	Nation      enums.Nation        `xml:"nation,attr"`
 	Passport    string              `xml:"passport,attr"`
-	Results     int                 `xml:"RESULTS"` // TODO
+	Results     []Result            `xml:"RESULTS>RESULT"`
 	Status      enums.AthleteStatus `xml:"status,attr"`
 	SWRid       int                 `xml:"swrid,attr"`
 }

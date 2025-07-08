@@ -13,7 +13,7 @@ type Entry struct {
 	EntryDistance int               `xml:"entrydistance,attr"`
 	EntryTime     parser.SwimTime   `xml:"entrytime,attr"`
 	EventId       int               `xml:"eventid,attr"`
-	Handicap      string            `xml:"handicap,attr"` // TODO: enum
+	Handicap      enums.Handicap    `xml:"handicap,attr"`
 	HeatId        int               `xml:"heatid,attr"`
 	Lane          int               `xml:"lane,attr"`
 	MeetInfo      string            `xml:"MEETINFO"`                      // TODO
