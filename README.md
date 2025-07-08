@@ -58,20 +58,20 @@ Lenex has a list of used data types. These are converted to the following Go dat
 
 ## Elements + Implementation Status
 
-| Item           | Item        | Item             |
-|----------------|-------------|------------------|
-| ✅AGEDATE       | ❌HANDICAP   | ❌RECORDLIST      |
-| ✅AGEGROUP      | ✅HEAT       | ✅RELAY           |
-| ✅ATHLETE       | ❌JUDGE      | ✅RELAYPOSITION   |
-| ✅BANK          | ✅LENEX      | ✅RESULT          |
-| ✅CLUB          | ✅MEET       | ✅SESSION         |
-| ✅COACH         | ✅MEETINFO   | ❌SPLIT           |
-| ✅CONSTRUCTOR   | ❌OFFICIAL   | ✅SWIMSTYLE       |
-| ✅CONTACT       | ❌POINTTABLE | ❌TIMESTANDARD    |
-| ✅ENTRY         | ✅POOL       | ❌TIMESTANDARDREF |
-| ✅EVENT         | ✅QUALIFY    |                  |
-| ❌FACILITY      | ✅RANKING    |                  |
-| ❌FEE           | ❌RECORD     |                  |
+| Item           | Item        | Item                 |
+|----------------|-------------|----------------------|
+| ✅AGEDATE       | ✅HANDICAP   | ❌RECORDLIST          |
+| ✅AGEGROUP      | ✅HEAT       | ✅RELAY               |
+| ✅ATHLETE       | ❌JUDGE      | ✅RELAYPOSITION       |
+| ✅BANK          | ✅LENEX      | ✅RESULT              |
+| ✅CLUB          | ✅MEET       | ✅SESSION             |
+| ✅COACH         | ✅MEETINFO   | ✅SPLIT               |
+| ✅CONSTRUCTOR   | ❌OFFICIAL   | ✅SWIMSTYLE           |
+| ✅CONTACT       | ❌POINTTABLE | ✅TIMESTANDARD        |
+| ✅ENTRY         | ✅POOL       | ✅TIMESTANDARDLIST    |
+| ✅EVENT         | ✅QUALIFY    | ✅TIMESTANDARDREF     |
+| ✅FACILITY      | ✅RANKING    |                      |
+| ❌FEE           | ❌RECORD     |                      |
 
 
 

@@ -18,7 +18,7 @@ type Result struct {
 	RelayPositions string              `xml:"RELAYPOSITIONS"`    // TODO
 	ResultId       int                 `xml:"resultid,attr"`
 	Status         enums.ResultStatus  `xml:"status,attr"`
-	Splits         string              `xml:"SPLITS"` // TODO
+	Splits         []Split             `xml:"SPLITS>SPLIT"`
 	SwimDistance   int                 `xml:"swimdistance,attr"`
 	SwimTime       parser.SwimTime     `xml:"swimtime,attr"`
 }

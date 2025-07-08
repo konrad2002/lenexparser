@@ -20,8 +20,8 @@ type Meet struct {
 	DeadlineTime      parser.CustomTime  `xml:"deadlinetime,attr"`
 	EntryStartDate    parser.CustomTime  `xml:"entrystartdate,attr"`
 	EntryType         enums.EntryType    `xml:"entrytype,attr"`
-	Facility          string             `xml:"FACILITY"` // TODO
-	Fees              string             `xml:"FEES"`     // TODO
+	Facility          Facility           `xml:"FACILITY"`
+	Fees              string             `xml:"FEES"` // TODO
 	HostClub          string             `xml:"hostclub,attr"`
 	HostClubUrl       string             `xml:"hostclub.url,attr"`
 	MaxEntriesAthlete int                `xml:"maxentriesathlete,attr"`
