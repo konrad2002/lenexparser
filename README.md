@@ -81,6 +81,12 @@ During the development and improvement of [SwimResults](https://swimresults.de) 
 
 ## 📄 Changelogs
 
+### v0.1.0
+
+- add all elements
+- add all enums
+- parser for time, date and swim time
+
 ### v0.0.1
 
 - add example LENEX file
