@@ -21,7 +21,7 @@ type Meet struct {
 	EntryStartDate    parser.CustomTime  `xml:"entrystartdate,attr"`
 	EntryType         enums.EntryType    `xml:"entrytype,attr"`
 	Facility          Facility           `xml:"FACILITY"`
-	Fees              string             `xml:"FEES"` // TODO
+	Fees              []Fee              `xml:"FEES>FEE"`
 	HostClub          string             `xml:"hostclub,attr"`
 	HostClubUrl       string             `xml:"hostclub.url,attr"`
 	MaxEntriesAthlete int                `xml:"maxentriesathlete,attr"`
@@ -32,7 +32,7 @@ type Meet struct {
 	Number            string             `xml:"number,attr"`
 	Organizer         string             `xml:"organizer,attr"`
 	OrganizerUrl      string             `xml:"organizer.url,attr"`
-	PointTable        string             `xml:"POINTTABLE"` // TODO
+	PointTable        PointTable         `xml:"POINTTABLE"`
 	Pool              Pool               `xml:"POOL"`
 	Qualify           Qualify            `xml:"QUALIFY"`
 	ReserveCount      int                `xml:"reservecount,attr"`

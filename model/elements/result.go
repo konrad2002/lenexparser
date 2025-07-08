@@ -15,7 +15,7 @@ type Result struct {
 	Lane           int                 `xml:"lane,attr"`
 	Points         int                 `xml:"points,attr"`
 	ReactionTime   string              `xml:"reactiontime,attr"` // TODO data type
-	RelayPositions string              `xml:"RELAYPOSITIONS"`    // TODO
+	RelayPositions []RelayPosition     `xml:"RELAYPOSITIONS>RELAYPOSITION"`
 	ResultId       int                 `xml:"resultid,attr"`
 	Status         enums.ResultStatus  `xml:"status,attr"`
 	Splits         []Split             `xml:"SPLITS>SPLIT"`

@@ -60,18 +60,18 @@ Lenex has a list of used data types. These are converted to the following Go dat
 
 | Item           | Item        | Item                 |
 |----------------|-------------|----------------------|
-| ✅AGEDATE       | ✅HANDICAP   | ❌RECORDLIST          |
+| ✅AGEDATE       | ✅HANDICAP   | ✅RECORDLIST          |
 | ✅AGEGROUP      | ✅HEAT       | ✅RELAY               |
-| ✅ATHLETE       | ❌JUDGE      | ✅RELAYPOSITION       |
+| ✅ATHLETE       | ✅JUDGE      | ✅RELAYPOSITION       |
 | ✅BANK          | ✅LENEX      | ✅RESULT              |
 | ✅CLUB          | ✅MEET       | ✅SESSION             |
 | ✅COACH         | ✅MEETINFO   | ✅SPLIT               |
-| ✅CONSTRUCTOR   | ❌OFFICIAL   | ✅SWIMSTYLE           |
-| ✅CONTACT       | ❌POINTTABLE | ✅TIMESTANDARD        |
+| ✅CONSTRUCTOR   | ✅OFFICIAL   | ✅SWIMSTYLE           |
+| ✅CONTACT       | ✅POINTTABLE | ✅TIMESTANDARD        |
 | ✅ENTRY         | ✅POOL       | ✅TIMESTANDARDLIST    |
 | ✅EVENT         | ✅QUALIFY    | ✅TIMESTANDARDREF     |
 | ✅FACILITY      | ✅RANKING    |                      |
-| ❌FEE           | ❌RECORD     |                      |
+| ✅FEE           | ✅RECORD     |                      |
 
 
 

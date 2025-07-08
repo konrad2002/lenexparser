@@ -15,25 +15,29 @@ type SwimTime struct {
 func (st *SwimTime) UnmarshalText(text []byte) error {
 	s := strings.TrimSpace(string(text))
 
-	// Example: "01:23,45"
-	parts := strings.SplitN(s, ",", 2)
+	// Example: "01:02:03,45"
+	parts := strings.SplitN(s, ".", 2)
 	if len(parts) != 2 {
 		return fmt.Errorf("invalid duration format: %q", s)
 	}
 
-	minSec := parts[0]     // "01:23"
+	hms := parts[0]        // "01:02:03"
 	hundredths := parts[1] // "45"
 
-	msParts := strings.SplitN(minSec, ":", 2)
-	if len(msParts) != 2 {
-		return fmt.Errorf("invalid minutes:seconds part: %q", minSec)
+	hmsParts := strings.Split(hms, ":")
+	if len(hmsParts) != 3 {
+		return fmt.Errorf("invalid HH:MM:SS part: %q", hms)
 	}
 
-	minutes, err := strconv.Atoi(msParts[0])
+	hours, err := strconv.Atoi(hmsParts[0])
+	if err != nil {
+		return fmt.Errorf("invalid hours: %w", err)
+	}
+	minutes, err := strconv.Atoi(hmsParts[1])
 	if err != nil {
 		return fmt.Errorf("invalid minutes: %w", err)
 	}
-	seconds, err := strconv.Atoi(msParts[1])
+	seconds, err := strconv.Atoi(hmsParts[2])
 	if err != nil {
 		return fmt.Errorf("invalid seconds: %w", err)
 	}
@@ -42,8 +46,9 @@ func (st *SwimTime) UnmarshalText(text []byte) error {
 		return fmt.Errorf("invalid hundredths: %w", err)
 	}
 
-	// calculate total duration
-	total := time.Duration(minutes)*time.Minute +
+	// compute total duration
+	total := time.Duration(hours)*time.Hour +
+		time.Duration(minutes)*time.Minute +
 		time.Duration(seconds)*time.Second +
 		time.Duration(hundredthsInt*10)*time.Millisecond
 

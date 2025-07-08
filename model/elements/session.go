@@ -12,9 +12,9 @@ type Session struct {
 	Date              parser.CustomTime  `xml:"date,attr"`
 	Daytime           parser.CustomTime  `xml:"daytime,attr"`
 	Endtime           parser.CustomTime  `xml:"endtime,attr"`
-	Events            []Event            `xml:"EVENTS>EVENT"` // TODO
-	Fees              string             `xml:"FEES"`         // TODO
-	Judges            string             `xml:"JUDGES"`       // TODO
+	Events            []Event            `xml:"EVENTS>EVENT"`
+	Fees              []Fee              `xml:"FEES>FEE"`
+	Judges            []Judge            `xml:"JUDGES>JUDGE"`
 	MaxEntriesAthlete int                `xml:"maxentriesathlete,attr"`
 	MaxEntriesRelay   int                `xml:"maxentriesrelay,attr"`
 	Name              string             `xml:"name,attr"`

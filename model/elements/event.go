@@ -8,10 +8,10 @@ import (
 
 type Event struct {
 	XMLName          xml.Name          `xml:"EVENT"`
-	AgeGroups        []AgeGroup        `xml:"AGEGROUPS>AGEGROUP"` // TODO
+	AgeGroups        []AgeGroup        `xml:"AGEGROUPS>AGEGROUP"`
 	Daytime          parser.CustomTime `xml:"daytime,attr"`
 	EventId          int               `xml:"eventid,attr"`
-	Fee              string            `xml:"FEE"` // TODO
+	Fee              Fee               `xml:"FEE"`
 	Gender           enums.EventGender `xml:"gender,attr"`
 	Heats            []Heat            `xml:"HEATS>HEAT"`
 	MaxEntries       int               `xml:"maxentries,attr"`
@@ -22,7 +22,7 @@ type Event struct {
 	Run              int               `xml:"run,attr"`
 	Status           enums.EventStatus `xml:"status,attr"`
 	SwimStyle        SwimStyle         `xml:"SWIMSTYLE"`
-	TimeStandardRefs string            `xml:"TIMESTANDARDREFS"` // TODO
+	TimeStandardRefs []TimeStandardRef `xml:"TIMESTANDARDREFS>TIMESTANDARDREF"`
 	Timing           enums.Timing      `xml:"timing,attr"`
 	Type             enums.EventType   `xml:"type,attr"`
 }

@@ -14,9 +14,9 @@ type Club struct {
 	NameEn      string         `xml:"name.en,attr"`
 	Nation      enums.Nation   `xml:"nation,attr"`
 	Number      int            `xml:"number,attr"`
-	Officials   string         `xml:"OFFICIALS"` // TODO
+	Officials   []Official     `xml:"OFFICIALS>OFFICIAL"`
 	Region      string         `xml:"region,attr"`
-	Relays      string         `xml:"RELAYS"` // TODO
+	Relays      []Relay        `xml:"RELAYS>RELAY"`
 	ShortName   string         `xml:"shortname,attr"`
 	ShortNameEn string         `xml:"shortname.en,attr"`
 	SWRid       int            `xml:"swrid,attr"`
