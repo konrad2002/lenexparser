@@ -9,7 +9,7 @@ import (
 type Event struct {
 	XMLName          xml.Name          `xml:"EVENT"`
 	AgeGroups        []AgeGroup        `xml:"AGEGROUPS>AGEGROUP"`
-	Daytime          parser.CustomTime `xml:"daytime,attr"`
+	Daytime          parser.DateTime   `xml:"daytime,attr"`
 	EventId          int               `xml:"eventid,attr"`
 	Fee              Fee               `xml:"FEE"`
 	Gender           enums.EventGender `xml:"gender,attr"`

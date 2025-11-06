@@ -9,7 +9,7 @@ import (
 type Athlete struct {
 	XMLName     xml.Name            `xml:"ATHLETE"`
 	AthleteId   int                 `xml:"athleteid,attr"`
-	Birthdate   parser.CustomTime   `xml:"birthdate,attr"`
+	Birthdate   parser.DateTime     `xml:"birthdate,attr"`
 	Club        Club                `xml:"CLUB"`
 	Entries     []Entry             `xml:"ENTRIES>ENTRY"`
 	Firstname   string              `xml:"firstname,attr"`

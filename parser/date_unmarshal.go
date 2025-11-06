@@ -6,12 +6,12 @@ import (
 	"time"
 )
 
-type CustomTime struct {
+type DateTime struct {
 	time.Time
 }
 
 // implement encoding.TextUnmarshaler
-func (ct *CustomTime) UnmarshalText(text []byte) error {
+func (dt *DateTime) UnmarshalText(text []byte) error {
 	s := strings.TrimSpace(string(text))
 
 	// try formats in order
@@ -27,7 +27,7 @@ func (ct *CustomTime) UnmarshalText(text []byte) error {
 		var t time.Time
 		t, err = time.Parse(layout, s)
 		if err == nil {
-			ct.Time = t
+			dt.Time = t
 			return nil
 		}
 	}

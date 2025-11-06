@@ -17,6 +17,6 @@ type RecordList struct {
 	Order    int                  `xml:"order,attr"`
 	Records  []Record             `xml:"RECORDS>RECORD"`
 	Region   string               `xml:"region,attr"`
-	Updated  parser.CustomTime    `xml:"updated,attr"`
+	Updated  parser.DateTime      `xml:"updated,attr"`
 	Type     enums.RecordListType `xml:"type,attr"`
 }

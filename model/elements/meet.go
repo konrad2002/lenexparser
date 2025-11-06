@@ -16,9 +16,9 @@ type Meet struct {
 	Clubs             []Club             `xml:"CLUBS>CLUB"`
 	Contact           Contact            `xml:"CONTACT"`
 	Course            enums.Course       `xml:"course,attr"`
-	Deadline          parser.CustomTime  `xml:"deadline,attr"`
-	DeadlineTime      parser.CustomTime  `xml:"deadlinetime,attr"`
-	EntryStartDate    parser.CustomTime  `xml:"entrystartdate,attr"`
+	Deadline          parser.DateTime    `xml:"deadline,attr"`
+	DeadlineTime      parser.DateTime    `xml:"deadlinetime,attr"`
+	EntryStartDate    parser.DateTime    `xml:"entrystartdate,attr"`
 	EntryType         enums.EntryType    `xml:"entrytype,attr"`
 	Facility          Facility           `xml:"FACILITY"`
 	Fees              []Fee              `xml:"FEES>FEE"`
@@ -44,5 +44,5 @@ type Meet struct {
 	Timing            enums.Timing       `xml:"timing,attr"`
 	TouchpadMode      enums.TouchpadMode `xml:"touchpadmode,attr"`
 	Type              string             `xml:"type,attr"`
-	WithdrawUntil     parser.CustomTime  `xml:"withdrawuntil,attr"`
+	WithdrawUntil     parser.DateTime    `xml:"withdrawuntil,attr"`
 }

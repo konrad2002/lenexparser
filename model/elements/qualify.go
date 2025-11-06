@@ -9,7 +9,7 @@ import (
 type Qualify struct {
 	XMLName    xml.Name                `xml:"QUALIFY"`
 	Conversion enums.QualifyConversion `xml:"conversion,attr"`
-	From       parser.CustomTime       `xml:"from,attr"`
+	From       parser.DateTime         `xml:"from,attr"`
 	Percent    int                     `xml:"percent,attr"`
-	Until      parser.CustomTime       `xml:"until,attr"`
+	Until      parser.DateTime         `xml:"until,attr"`
 }

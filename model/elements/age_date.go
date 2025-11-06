@@ -9,5 +9,5 @@ import (
 type AgeDate struct {
 	XMLName xml.Name          `xml:"AGEDATE"`
 	Type    enums.AgeDateType `xml:"type,attr"`
-	Value   parser.CustomTime `xml:"value,attr"`
+	Value   parser.DateTime   `xml:"value,attr"`
 }
