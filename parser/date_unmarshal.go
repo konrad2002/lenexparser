@@ -10,7 +10,7 @@ type DateTime struct {
 	time.Time
 }
 
-// implement encoding.TextUnmarshaler
+// UnmarshalText implements encoding.TextUnmarshaler
 func (dt *DateTime) UnmarshalText(text []byte) error {
 	s := strings.TrimSpace(string(text))
 
