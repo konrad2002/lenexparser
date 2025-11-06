@@ -76,15 +76,15 @@ Lenex has a list of used data types. These are converted to the following Go dat
 | LENEX                | short | Go                  | Notes                                                                                                                                            |
 |----------------------|-------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
 | Currency             | c     | `int`               |                                                                                                                                                  |
-| Date                 | d     | `parser.CustomTime` |                                                                                                                                                  |
-| Daytime              | t     | `parser.CustomTime` |                                                                                                                                                  |
+| Date                 | d     | `parser.DateTime`   |                                                                                                                                                  |
+| Daytime              | t     | `parser.DateTime`   |                                                                                                                                                  |
 | Enumeration          | e     | `const ()`          |                                                                                                                                                  |
 | Number               | n     | `int`               |                                                                                                                                                  |
 | Global Identifier    | uuid  | `string`            |                                                                                                                                                  |
 | String               | s     | `string`            | special character entities will be replaced, see [XML char entity references](https://www.wikiwand.com/en/XML_entity?mobile-app=true&theme=dark) |
 | String international | si    | `string`            |                                                                                                                                                  |
 | Swim time            | st    | `parser.SwimTime`   |                                                                                                                                                  |
-| Timestamp            | ts    | `parser.CustomTime` |                                                                                                                                                  |
+| Timestamp            | ts    | `parser.DateTime`   |                                                                                                                                                  |
 | Reaction time        | rt    | `parser.SwimTime`   |                                                                                                                                                  |
 | Unique id            | uid   | `string`            |                                                                                                                                                  |
 
