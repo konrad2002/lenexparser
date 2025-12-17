@@ -6,7 +6,7 @@ import (
 )
 
 type Official struct {
-	XMLName    xml.Name     `xml:"COACH"`
+	XMLName    xml.Name     `xml:"OFFICIAL"`
 	Contact    Contact      `xml:"CONTACT"`
 	FirstName  string       `xml:"firstname,attr"`
 	Gender     enums.Gender `xml:"gender,attr"`

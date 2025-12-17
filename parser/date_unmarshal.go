@@ -20,6 +20,7 @@ func (dt *DateTime) UnmarshalText(text []byte) error {
 		"15:04",      // 15:34
 		time.RFC3339, // fallback
 		"2006-01-02", // fallback
+		"2006-01-02T15:04:05",
 	}
 
 	var err error

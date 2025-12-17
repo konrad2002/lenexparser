@@ -15,6 +15,11 @@ type SwimTime struct {
 func (st *SwimTime) UnmarshalText(text []byte) error {
 	s := strings.TrimSpace(string(text))
 
+	if s == "NT" {
+		st.Duration = time.Duration(0)
+		return nil
+	}
+
 	// Example: "01:02:03,45"
 	parts := strings.SplitN(s, ".", 2)
 	if len(parts) != 2 {
