@@ -21,4 +21,5 @@ type Result struct {
 	Splits         []Split             `xml:"SPLITS>SPLIT"`
 	SwimDistance   int                 `xml:"swimdistance,attr"`
 	SwimTime       parser.SwimTime     `xml:"swimtime,attr"`
+	EntryTime      parser.SwimTime     `xml:"entrytime,attr"`
 }
